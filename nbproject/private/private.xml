@@ -3,12 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/layan/Desktop/SOCK/src/Server.java</file>
-            <file>file:/C:/Users/layan/Desktop/SOCK/src/ServerConnection.java</file>
-            <file>file:/C:/Users/layan/Desktop/SOCK/src/start.java</file>
-            <file>file:/C:/Users/layan/Desktop/SOCK/src/Background.png</file>
-            <file>file:/C:/Users/layan/Desktop/SOCK/src/Client.java</file>
-            <file>file:/C:/Users/layan/Desktop/SOCK/src/ClientHandler.java</file>
+            <file>file:/D:/IT328-%20network/socket-connection-project/src/start.java</file>
+            <file>file:/D:/IT328-%20network/socket-connection-project/src/Server.java</file>
+            <file>file:/D:/IT328-%20network/socket-connection-project/src/Client.java</file>
+            <file>file:/D:/IT328-%20network/socket-connection-project/src/ClientHandler.java</file>
+            <file>file:/D:/IT328-%20network/socket-connection-project/src/ServerConnection.java</file>
         </group>
     </open-files>
 </project-private>

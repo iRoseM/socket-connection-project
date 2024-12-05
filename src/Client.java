@@ -321,6 +321,8 @@ public void displayRoomFullMessage() {
         JOptionPane.showMessageDialog(this, "The room is full. Please wait for the next round.", "Room Full", JOptionPane.WARNING_MESSAGE);
     });
 }
+
+    
     public void displaykickedMessage() throws Exception {
     JOptionPane.showMessageDialog(this, "All players left the game you cant play solo.", "Solo", JOptionPane.WARNING_MESSAGE);
     this.dispose();

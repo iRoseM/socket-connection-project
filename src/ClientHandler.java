@@ -90,18 +90,31 @@ private void handlePlayRequest() {
      */
     private void disconnectClient() {
     try {
-        // Remove the player from the waiting list
+        // Notify and remove from playing list
         synchronized (Server.playingClients) {
             if (Server.playingClients.contains(username)) {
                 Server.playingClients.remove(username);
-                Server.broadcastPlayingPlayers(); // Broadcast updated waiting list
+                Server.broadcastPlayingPlayers();
+
+                // Check if only one player remains
+                if (Server.playingClients.size() == 1) {
+                    String remainingPlayer = Server.playingClients.get(0);
+                    for (ClientHandler client : clients) {
+                        if (client.getUsername().equals(remainingPlayer)) {
+                            client.sendMessage("KICKED: You cannot play alone.");
+                            Server.playingClients.remove(remainingPlayer); // Remove solo player
+                            break;
+                        }
+                    }
+                    Server.endGame(); // End the game
+                }
             }
         }
 
-        // Remove the player from the connected clients list
+        // Notify and remove from connected list
         synchronized (Server.clients) {
             Server.clients.remove(this);
-            Server.broadcastConnectedPlayers(); // Broadcast updated connected players
+            Server.broadcastConnectedPlayers();
         }
 
         // Close the client socket
